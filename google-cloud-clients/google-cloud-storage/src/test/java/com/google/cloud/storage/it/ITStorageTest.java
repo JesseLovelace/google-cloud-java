@@ -1787,6 +1787,7 @@ public class ITStorageTest {
     String landsatBucket = "gcp-public-data-landsat";
     String landsatPrefix = "LC08/PRE/044/034/LC80440342016259LGN00/";
     String landsatBlob = landsatPrefix + "LC80440342016259LGN00_MTL.txt";
+
     byte[] bytes = unauthorizedStorage.readAllBytes(landsatBucket, landsatBlob);
 
     assertThat(bytes.length).isEqualTo(7903);
